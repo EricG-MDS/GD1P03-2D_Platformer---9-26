@@ -1,0 +1,11 @@
+<Solution>
+  <Configurations>
+    <BuildType Name="Debug (Dynamic)" />
+    <BuildType Name="Debug (Static)" />
+    <BuildType Name="Release (Dynamic)" />
+    <BuildType Name="Release (Static)" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="SFML3_RYGB_platformer/SFML3_RYGB_platformer.vcxproj" Id="015a9e58-dd4e-40c9-9d0f-333df537f2b4" />
+</Solution>

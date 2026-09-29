@@ -1,0 +1,968 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug (Dynamic)|Win32">
+      <Configuration>Debug (Dynamic)</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release (Dynamic)|Win32">
+      <Configuration>Release (Dynamic)</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug (Static)|Win32">
+      <Configuration>Debug (Static)</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release (Static)|Win32">
+      <Configuration>Release (Static)</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug (Dynamic)|x64">
+      <Configuration>Debug (Dynamic)</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release (Dynamic)|x64">
+      <Configuration>Release (Dynamic)</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug (Static)|x64">
+      <Configuration>Debug (Static)</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release (Static)|x64">
+      <Configuration>Release (Static)</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{015a9e58-dd4e-40c9-9d0f-333df537f2b4}</ProjectGuid>
+    <RootNamespace>SFML302</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug (Static)|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug (Static)|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug (Dynamic)|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug (Dynamic)|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (Static)|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (Static)|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (Dynamic)|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (Dynamic)|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug (Dynamic)|Win32'">
+    <OutDir>$(SolutionDir)\Build_$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\Temp\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_x86_dynamic_debug</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (Dynamic)|Win32'">
+    <OutDir>$(SolutionDir)\Build_$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\Temp\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_x86_dynamic</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug (Static)|Win32'">
+    <OutDir>$(SolutionDir)\Build_$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\Temp\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_x86_static_debug</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (Static)|Win32'">
+    <OutDir>$(SolutionDir)\Build_$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\Temp\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_x86_static</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug (Dynamic)|x64'">
+    <OutDir>$(SolutionDir)\Build_$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\Temp\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_x64_dynamic_debug</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (Dynamic)|x64'">
+    <OutDir>$(SolutionDir)\Build_$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\Temp\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_x64_dynamic</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug (Static)|x64'">
+    <OutDir>$(SolutionDir)\Build_$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\Temp\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_x64_static_debug</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (Static)|x64'">
+    <OutDir>$(SolutionDir)\Build_$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\Temp\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_x64_static</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug (Static)|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SFML_STATIC;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)lib\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-main-d.lib;sfml-graphics-s-d.lib;freetyped.lib;sfml-window-s-d.lib;gdi32.lib;OpenGL32.lib;sfml-network-s-d.lib;ws2_32.lib;sfml-audio-s-d.lib;vorbisd.lib;vorbisfiled.lib;vorbisencd.lib;flacd.lib;oggd.lib;sfml-system-s-d.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug (Static)|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SFML_STATIC;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)lib\x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-main-d.lib;sfml-graphics-s-d.lib;freetyped.lib;sfml-window-s-d.lib;gdi32.lib;OpenGL32.lib;sfml-network-s-d.lib;ws2_32.lib;sfml-audio-s-d.lib;vorbisd.lib;vorbisfiled.lib;vorbisencd.lib;flacd.lib;oggd.lib;sfml-system-s-d.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug (Dynamic)|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)lib\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-main-d.lib;sfml-graphics-d.lib;sfml-window-d.lib;OpenGL32.lib;sfml-network-d.lib;sfml-audio-d.lib;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug (Dynamic)|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)lib\x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-main-d.lib;sfml-graphics-d.lib;sfml-window-d.lib;OpenGL32.lib;sfml-network-d.lib;sfml-audio-d.lib;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release (Static)|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SFML_STATIC;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)lib\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-main.lib;sfml-graphics-s.lib;freetype.lib;sfml-window-s.lib;gdi32.lib;OpenGL32.lib;sfml-network-s.lib;ws2_32.lib;sfml-audio-s.lib;vorbis.lib;vorbisfile.lib;vorbisenc.lib;flac.lib;ogg.lib;sfml-system-s.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release (Static)|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SFML_STATIC;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)lib\x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-main.lib;sfml-graphics-s.lib;freetype.lib;sfml-window-s.lib;gdi32.lib;OpenGL32.lib;sfml-network-s.lib;ws2_32.lib;sfml-audio-s.lib;vorbis.lib;vorbisfile.lib;vorbisenc.lib;flac.lib;ogg.lib;sfml-system-s.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release (Dynamic)|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)lib\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-main.lib;sfml-graphics.lib;sfml-window.lib;OpenGL32.lib;sfml-network.lib;sfml-audio.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release (Dynamic)|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)lib\x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-main.lib;sfml-graphics.lib;sfml-window.lib;OpenGL32.lib;sfml-network.lib;sfml-audio.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="source\colition_handler.cpp" />
+    <ClCompile Include="source\dynamic_object.cpp" />
+    <ClCompile Include="source\object.cpp" />
+    <ClCompile Include="source\physics.cpp" />
+    <ClCompile Include="source\player.cpp" />
+    <ClCompile Include="source\sprites.cpp" />
+    <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\sprite.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Extra libs -->
+    <!-- x86 -->
+    <None Include="lib\x86\freetype.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\freetyped.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\flac.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\flacd.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\ogg.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\oggd.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\vorbis.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\vorbisd.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\vorbisenc.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\vorbisencd.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\vorbisfile.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\vorbisfiled.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\harfbuzz.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\harfbuzzd.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\libssh2.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\mbedcrypto.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\mbedcryptod.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\mbedtls.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\mbedtlsd.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\mbedx509.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\mbedx509d.lib">
+      <FileType>Document</FileType>
+    </None>
+    <!-- x64 -->
+    <None Include="lib\x64\freetype.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\freetyped.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\flac.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\flacd.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\ogg.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\oggd.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\vorbis.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\vorbisd.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\vorbisenc.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\vorbisencd.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\vorbisfile.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\vorbisfiled.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\harfbuzz.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\harfbuzzd.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\libssh2.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\mbedcrypto.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\mbedcryptod.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\mbedtls.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\mbedtlsd.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\mbedx509.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\mbedx509d.lib">
+      <FileType>Document</FileType>
+    </None>
+    <!-- SFML3 LIB's -->
+    <!-- x86 -->
+    <None Include="lib\x86\sfml-main.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-main-d.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-audio-d.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-audio-s-d.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-audio-s.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-audio.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-graphics-d.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-graphics-s-d.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-graphics-s.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-graphics.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-network.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-network-d.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-network-s.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-network-s-d.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-system.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-system-d.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-system-s.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-system-s-d.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-window.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-window-d.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-window-s.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-window-s-d.lib">
+      <FileType>Document</FileType>
+    </None>
+    <!-- x64 -->
+    <None Include="lib\x64\sfml-main.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-main-d.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-audio-d.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-audio-s-d.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-audio-s.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-audio.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-graphics-d.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-graphics-s-d.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-graphics-s.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-graphics.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-network.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-network-d.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-network-s.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-network-s-d.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-system.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-system-d.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-system-s.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-system-s-d.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-window.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-window-d.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-window-s.lib">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-window-s-d.lib">
+      <FileType>Document</FileType>
+    </None>
+    <!-- SFML3 PDB's -->
+    <!-- x86 -->
+    <None Include="lib\x86\sfml-main-d.pdb">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-audio-d.pdb">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-audio-s-d.pdb">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-graphics-d.pdb">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-graphics-s-d.pdb">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-network-d.pdb">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-network-s-d.pdb">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-system-d.pdb">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-system-s-d.pdb">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-window-d.pdb">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x86\sfml-window-s-d.pdb">
+      <FileType>Document</FileType>
+    </None>
+    <!-- x64 -->
+    <None Include="lib\x64\sfml-main-d.pdb">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-audio-d.pdb">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-audio-s-d.pdb">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-graphics-d.pdb">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-graphics-s-d.pdb">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-network-d.pdb">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-network-s-d.pdb">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-system-d.pdb">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-system-s-d.pdb">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-window-d.pdb">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="lib\x64\sfml-window-s-d.pdb">
+      <FileType>Document</FileType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <!-- x86 -->
+    <ContentWithTargetPath Include="bin\x86\sfml-audio-3.dll">
+      <FileType>Document</FileType>
+      <CopyToOutputDirectory Condition="'$(Configuration)|$(Platform)'=='Release (Dynamic)|Win32'">PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>sfml-audio-3.dll</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="bin\x86\sfml-audio-d-3.dll">
+      <FileType>Document</FileType>
+      <CopyToOutputDirectory Condition="'$(Configuration)|$(Platform)'=='Debug (Dynamic)|Win32'">PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>sfml-audio-d-3.dll</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="bin\x86\sfml-graphics-3.dll">
+      <FileType>Document</FileType>
+      <CopyToOutputDirectory Condition="'$(Configuration)|$(Platform)'=='Release (Dynamic)|Win32'">PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>sfml-graphics-3.dll</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="bin\x86\sfml-graphics-d-3.dll">
+      <FileType>Document</FileType>
+      <CopyToOutputDirectory Condition="'$(Configuration)|$(Platform)'=='Debug (Dynamic)|Win32'">PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>sfml-graphics-d-3.dll</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="bin\x86\sfml-network-3.dll">
+      <FileType>Document</FileType>
+      <CopyToOutputDirectory Condition="'$(Configuration)|$(Platform)'=='Release (Dynamic)|Win32'">PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>sfml-network-3.dll</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="bin\x86\sfml-network-d-3.dll">
+      <FileType>Document</FileType>
+      <CopyToOutputDirectory Condition="'$(Configuration)|$(Platform)'=='Debug (Dynamic)|Win32'">PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>sfml-network-d-3.dll</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="bin\x86\sfml-system-3.dll">
+      <FileType>Document</FileType>
+      <CopyToOutputDirectory Condition="'$(Configuration)|$(Platform)'=='Release (Dynamic)|Win32'">PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>sfml-system-3.dll</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="bin\x86\sfml-system-d-3.dll">
+      <FileType>Document</FileType>
+      <CopyToOutputDirectory Condition="'$(Configuration)|$(Platform)'=='Debug (Dynamic)|Win32'">PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>sfml-system-d-3.dll</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="bin\x86\sfml-window-3.dll">
+      <FileType>Document</FileType>
+      <CopyToOutputDirectory Condition="'$(Configuration)|$(Platform)'=='Release (Dynamic)|Win32'">PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>sfml-window-3.dll</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="bin\x86\sfml-window-d-3.dll">
+      <FileType>Document</FileType>
+      <CopyToOutputDirectory Condition="'$(Configuration)|$(Platform)'=='Debug (Dynamic)|Win32'">PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>sfml-window-d-3.dll</TargetPath>
+    </ContentWithTargetPath>
+    <!-- x64 -->
+    <ContentWithTargetPath Include="bin\x64\sfml-audio-3.dll">
+      <FileType>Document</FileType>
+      <CopyToOutputDirectory Condition="'$(Configuration)|$(Platform)'=='Release (Dynamic)|x64'">PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>sfml-audio-3.dll</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="bin\x64\sfml-audio-d-3.dll">
+      <FileType>Document</FileType>
+      <CopyToOutputDirectory Condition="'$(Configuration)|$(Platform)'=='Debug (Dynamic)|x64'">PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>sfml-audio-d-3.dll</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="bin\x64\sfml-graphics-3.dll">
+      <FileType>Document</FileType>
+      <CopyToOutputDirectory Condition="'$(Configuration)|$(Platform)'=='Release (Dynamic)|x64'">PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>sfml-graphics-3.dll</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="bin\x64\sfml-graphics-d-3.dll">
+      <FileType>Document</FileType>
+      <CopyToOutputDirectory Condition="'$(Configuration)|$(Platform)'=='Debug (Dynamic)|x64'">PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>sfml-graphics-d-3.dll</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="bin\x64\sfml-network-3.dll">
+      <FileType>Document</FileType>
+      <CopyToOutputDirectory Condition="'$(Configuration)|$(Platform)'=='Release (Dynamic)|x64'">PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>sfml-network-3.dll</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="bin\x64\sfml-network-d-3.dll">
+      <FileType>Document</FileType>
+      <CopyToOutputDirectory Condition="'$(Configuration)|$(Platform)'=='Debug (Dynamic)|x64'">PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>sfml-network-d-3.dll</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="bin\x64\sfml-system-3.dll">
+      <FileType>Document</FileType>
+      <CopyToOutputDirectory Condition="'$(Configuration)|$(Platform)'=='Release (Dynamic)|x64'">PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>sfml-system-3.dll</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="bin\x64\sfml-system-d-3.dll">
+      <FileType>Document</FileType>
+      <CopyToOutputDirectory Condition="'$(Configuration)|$(Platform)'=='Debug (Dynamic)|x64'">PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>sfml-system-d-3.dll</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="bin\x64\sfml-window-3.dll">
+      <FileType>Document</FileType>
+      <CopyToOutputDirectory Condition="'$(Configuration)|$(Platform)'=='Release (Dynamic)|x64'">PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>sfml-window-3.dll</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="bin\x64\sfml-window-d-3.dll">
+      <FileType>Document</FileType>
+      <CopyToOutputDirectory Condition="'$(Configuration)|$(Platform)'=='Debug (Dynamic)|x64'">PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>sfml-window-d-3.dll</TargetPath>
+    </ContentWithTargetPath>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\colition.h" />
+    <ClInclude Include="source\dynamic_object.h" />
+    <ClInclude Include="include\SFML\Main.hpp" />
+    <ClInclude Include="include\SFML\Config.hpp" />
+    <ClInclude Include="include\SFML\GpuPreference.hpp" />
+    <ClInclude Include="include\SFML\OpenGL.hpp" />
+    <ClInclude Include="include\SFML\Audio.hpp" />
+    <ClInclude Include="include\SFML\Graphics.hpp" />
+    <ClInclude Include="include\SFML\Network.hpp" />
+    <ClInclude Include="include\SFML\System.hpp" />
+    <ClInclude Include="include\SFML\Window.hpp" />
+    <!-- Audio -->
+    <ClInclude Include="include\SFML\Audio\AudioResource.hpp" />
+    <ClInclude Include="include\SFML\Audio\Export.hpp" />
+    <ClInclude Include="include\SFML\Audio\InputSoundFile.hpp" />
+    <ClInclude Include="include\SFML\Audio\Listener.hpp" />
+    <ClInclude Include="include\SFML\Audio\Music.hpp" />
+    <ClInclude Include="include\SFML\Audio\OutputSoundFile.hpp" />
+    <ClInclude Include="include\SFML\Audio\PlaybackDevice.hpp" />
+    <ClInclude Include="include\SFML\Audio\Sound.hpp" />
+    <ClInclude Include="include\SFML\Audio\SoundBuffer.hpp" />
+    <ClInclude Include="include\SFML\Audio\SoundBufferRecorder.hpp" />
+    <ClInclude Include="include\SFML\Audio\SoundChannel.hpp" />
+    <ClInclude Include="include\SFML\Audio\SoundFileFactory.hpp" />
+    <ClInclude Include="include\SFML\Audio\SoundFileFactory.inl" />
+    <ClInclude Include="include\SFML\Audio\SoundFileReader.hpp" />
+    <ClInclude Include="include\SFML\Audio\SoundFileWriter.hpp" />
+    <ClInclude Include="include\SFML\Audio\SoundRecorder.hpp" />
+    <ClInclude Include="include\SFML\Audio\SoundSource.hpp" />
+    <ClInclude Include="include\SFML\Audio\SoundStream.hpp" />
+    <!-- Graphics -->
+    <ClInclude Include="include\SFML\Graphics\BlendMode.hpp" />
+    <ClInclude Include="include\SFML\Graphics\CircleShape.hpp" />
+    <ClInclude Include="include\SFML\Graphics\Color.hpp" />
+    <ClInclude Include="include\SFML\Graphics\Color.inl" />
+    <ClInclude Include="include\SFML\Graphics\ConvexShape.hpp" />
+    <ClInclude Include="include\SFML\Graphics\CoordinateType.hpp" />
+    <ClInclude Include="include\SFML\Graphics\Drawable.hpp" />
+    <ClInclude Include="include\SFML\Graphics\Export.hpp" />
+    <ClInclude Include="include\SFML\Graphics\Font.hpp" />
+    <ClInclude Include="include\SFML\Graphics\Glsl.hpp" />
+    <ClInclude Include="include\SFML\Graphics\Glsl.inl" />
+    <ClInclude Include="include\SFML\Graphics\Glyph.hpp" />
+    <ClInclude Include="include\SFML\Graphics\Image.hpp" />
+    <ClInclude Include="include\SFML\Graphics\PrimitiveType.hpp" />
+    <ClInclude Include="include\SFML\Graphics\Rect.hpp" />
+    <ClInclude Include="include\SFML\Graphics\Rect.inl" />
+    <ClInclude Include="include\SFML\Graphics\RectangleShape.hpp" />
+    <ClInclude Include="include\SFML\Graphics\RenderStates.hpp" />
+    <ClInclude Include="include\SFML\Graphics\RenderTarget.hpp" />
+    <ClInclude Include="include\SFML\Graphics\RenderTexture.hpp" />
+    <ClInclude Include="include\SFML\Graphics\RenderWindow.hpp" />
+    <ClInclude Include="include\SFML\Graphics\Shader.hpp" />
+    <ClInclude Include="include\SFML\Graphics\Shape.hpp" />
+    <ClInclude Include="include\SFML\Graphics\Sprite.hpp" />
+    <ClInclude Include="include\SFML\Graphics\StencilMode.hpp" />
+    <ClInclude Include="include\SFML\Graphics\Text.hpp" />
+    <ClInclude Include="include\SFML\Graphics\Texture.hpp" />
+    <ClInclude Include="include\SFML\Graphics\Transform.hpp" />
+    <ClInclude Include="include\SFML\Graphics\Transform.inl" />
+    <ClInclude Include="include\SFML\Graphics\Transformable.hpp" />
+    <ClInclude Include="include\SFML\Graphics\Vertex.hpp" />
+    <ClInclude Include="include\SFML\Graphics\VertexArray.hpp" />
+    <ClInclude Include="include\SFML\Graphics\VertexBuffer.hpp" />
+    <ClInclude Include="include\SFML\Graphics\View.hpp" />
+    <!-- Network -->
+    <ClInclude Include="include\SFML\Network\Export.hpp" />
+    <ClInclude Include="include\SFML\Network\Ftp.hpp" />
+    <ClInclude Include="include\SFML\Network\Http.hpp" />
+    <ClInclude Include="include\SFML\Network\IpAddress.hpp" />
+    <ClInclude Include="include\SFML\Network\Packet.hpp" />
+    <ClInclude Include="include\SFML\Network\Socket.hpp" />
+    <ClInclude Include="include\SFML\Network\SocketHandle.hpp" />
+    <ClInclude Include="include\SFML\Network\SocketSelector.hpp" />
+    <ClInclude Include="include\SFML\Network\TcpListener.hpp" />
+    <ClInclude Include="include\SFML\Network\TcpSocket.hpp" />
+    <ClInclude Include="include\SFML\Network\UdpSocket.hpp" />
+    <ClInclude Include="include\SFML\Network\Dns.hpp" />
+    <ClInclude Include="include\SFML\Network\Sftp.hpp" />
+    <!-- System -->
+    <ClInclude Include="include\SFML\System\Angle.hpp" />
+    <ClInclude Include="include\SFML\System\Angle.inl" />
+    <ClInclude Include="include\SFML\System\Clock.hpp" />
+    <ClInclude Include="include\SFML\System\Err.hpp" />
+    <ClInclude Include="include\SFML\System\Exception.hpp" />
+    <ClInclude Include="include\SFML\System\Export.hpp" />
+    <ClInclude Include="include\SFML\System\FileInputStream.hpp" />
+    <ClInclude Include="include\SFML\System\InputStream.hpp" />
+    <ClInclude Include="include\SFML\System\MemoryInputStream.hpp" />
+    <ClInclude Include="include\SFML\System\NativeActivity.hpp" />
+    <ClInclude Include="include\SFML\System\Sleep.hpp" />
+    <ClInclude Include="include\SFML\System\String.hpp" />
+    <ClInclude Include="include\SFML\System\String.inl" />
+    <ClInclude Include="include\SFML\System\SuspendAwareClock.hpp" />
+    <ClInclude Include="include\SFML\System\Time.hpp" />
+    <ClInclude Include="include\SFML\System\Time.inl" />
+    <ClInclude Include="include\SFML\System\Utf.hpp" />
+    <ClInclude Include="include\SFML\System\Utf.inl" />
+    <ClInclude Include="include\SFML\System\Vector2.hpp" />
+    <ClInclude Include="include\SFML\System\Vector2.inl" />
+    <ClInclude Include="include\SFML\System\Vector3.hpp" />
+    <ClInclude Include="include\SFML\System\Vector3.inl" />
+    <ClInclude Include="include\SFML\System\TimeoutWithPredicate.hpp" />
+    <ClInclude Include="include\SFML\System\Version.hpp" />
+    <!-- Window -->
+    <ClInclude Include="include\SFML\Window\Clipboard.hpp" />
+    <ClInclude Include="include\SFML\Window\Context.hpp" />
+    <ClInclude Include="include\SFML\Window\ContextSettings.hpp" />
+    <ClInclude Include="include\SFML\Window\Cursor.hpp" />
+    <ClInclude Include="include\SFML\Window\Event.hpp" />
+    <ClInclude Include="include\SFML\Window\Event.inl" />
+    <ClInclude Include="include\SFML\Window\Export.hpp" />
+    <ClInclude Include="include\SFML\Window\GlResource.hpp" />
+    <ClInclude Include="include\SFML\Window\Joystick.hpp" />
+    <ClInclude Include="include\SFML\Window\Keyboard.hpp" />
+    <ClInclude Include="include\SFML\Window\Mouse.hpp" />
+    <ClInclude Include="include\SFML\Window\Sensor.hpp" />
+    <ClInclude Include="include\SFML\Window\Touch.hpp" />
+    <ClInclude Include="include\SFML\Window\VideoMode.hpp" />
+    <ClInclude Include="include\SFML\Window\Vulkan.hpp" />
+    <ClInclude Include="include\SFML\Window\Window.hpp" />
+    <ClInclude Include="include\SFML\Window\WindowBase.hpp" />
+    <ClInclude Include="include\SFML\Window\WindowBase.inl" />
+    <ClInclude Include="include\SFML\Window\WindowEnums.hpp" />
+    <ClInclude Include="include\SFML\Window\WindowHandle.hpp" />
+    <!-- Extra 3.1.0 - SSH2 -->
+    <ClInclude Include="include\libssh2.h" />
+    <ClInclude Include="include\libssh2_publickey.h" />
+    <ClInclude Include="include\libssh2_sftp.h" />
+    <!-- Extra 3.1.0 - PSA -->
+    <ClInclude Include="include\psa\build_info.h" />
+    <ClInclude Include="include\psa\crypto.h" />
+    <ClInclude Include="include\psa\crypto_adjust_auto_enabled.h" />
+    <ClInclude Include="include\psa\crypto_adjust_config_dependencies.h" />
+    <ClInclude Include="include\psa\crypto_adjust_config_key_pair_types.h" />
+    <ClInclude Include="include\psa\crypto_adjust_config_synonyms.h" />
+    <ClInclude Include="include\psa\crypto_builtin_composites.h" />
+    <ClInclude Include="include\psa\crypto_builtin_key_derivation.h" />
+    <ClInclude Include="include\psa\crypto_builtin_primitives.h" />
+    <ClInclude Include="include\psa\crypto_compat.h" />
+    <ClInclude Include="include\psa\crypto_config.h" />
+    <ClInclude Include="include\psa\crypto_driver_common.h" />
+    <ClInclude Include="include\psa\crypto_driver_contexts_composites.h" />
+    <ClInclude Include="include\psa\crypto_driver_contexts_key_derivation.h" />
+    <ClInclude Include="include\psa\crypto_driver_contexts_primitives.h" />
+    <ClInclude Include="include\psa\crypto_extra.h" />
+    <ClInclude Include="include\psa\crypto_legacy.h" />
+    <ClInclude Include="include\psa\crypto_platform.h" />
+    <ClInclude Include="include\psa\crypto_se_driver.h" />
+    <ClInclude Include="include\psa\crypto_sizes.h" />
+    <ClInclude Include="include\psa\crypto_struct.h" />
+    <ClInclude Include="include\psa\crypto_types.h" />
+    <ClInclude Include="include\psa\crypto_values.h" />
+    <!-- Extra 3.1.0 - mbedtls -->
+    <ClInclude Include="include\mbedtls\aes.h" />
+    <ClInclude Include="include\mbedtls\aria.h" />
+    <ClInclude Include="include\mbedtls\asn1.h" />
+    <ClInclude Include="include\mbedtls\asn1write.h" />
+    <ClInclude Include="include\mbedtls\base64.h" />
+    <ClInclude Include="include\mbedtls\bignum.h" />
+    <ClInclude Include="include\mbedtls\block_cipher.h" />
+    <ClInclude Include="include\mbedtls\build_info.h" />
+    <ClInclude Include="include\mbedtls\camellia.h" />
+    <ClInclude Include="include\mbedtls\ccm.h" />
+    <ClInclude Include="include\mbedtls\chacha20.h" />
+    <ClInclude Include="include\mbedtls\chachapoly.h" />
+    <ClInclude Include="include\mbedtls\check_config.h" />
+    <ClInclude Include="include\mbedtls\cipher.h" />
+    <ClInclude Include="include\mbedtls\cmac.h" />
+    <ClInclude Include="include\mbedtls\compat-2.x.h" />
+    <ClInclude Include="include\mbedtls\config_adjust_legacy_crypto.h" />
+    <ClInclude Include="include\mbedtls\config_adjust_legacy_from_psa.h" />
+    <ClInclude Include="include\mbedtls\config_adjust_psa_from_legacy.h" />
+    <ClInclude Include="include\mbedtls\config_adjust_psa_superset_legacy.h" />
+    <ClInclude Include="include\mbedtls\config_adjust_ssl.h" />
+    <ClInclude Include="include\mbedtls\config_adjust_x509.h" />
+    <ClInclude Include="include\mbedtls\config_psa.h" />
+    <ClInclude Include="include\mbedtls\constant_time.h" />
+    <ClInclude Include="include\mbedtls\ctr_drbg.h" />
+    <ClInclude Include="include\mbedtls\debug.h" />
+    <ClInclude Include="include\mbedtls\des.h" />
+    <ClInclude Include="include\mbedtls\dhm.h" />
+    <ClInclude Include="include\mbedtls\ecdh.h" />
+    <ClInclude Include="include\mbedtls\ecdsa.h" />
+    <ClInclude Include="include\mbedtls\ecjpake.h" />
+    <ClInclude Include="include\mbedtls\ecp.h" />
+    <ClInclude Include="include\mbedtls\entropy.h" />
+    <ClInclude Include="include\mbedtls\error.h" />
+    <ClInclude Include="include\mbedtls\gcm.h" />
+    <ClInclude Include="include\mbedtls\hkdf.h" />
+    <ClInclude Include="include\mbedtls\hmac_drbg.h" />
+    <ClInclude Include="include\mbedtls\lms.h" />
+    <ClInclude Include="include\mbedtls\mbedtls_config.h" />
+    <ClInclude Include="include\mbedtls\md.h" />
+    <ClInclude Include="include\mbedtls\md5.h" />
+    <ClInclude Include="include\mbedtls\memory_buffer_alloc.h" />
+    <ClInclude Include="include\mbedtls\net_sockets.h" />
+    <ClInclude Include="include\mbedtls\nist_kw.h" />
+    <ClInclude Include="include\mbedtls\oid.h" />
+    <ClInclude Include="include\mbedtls\pem.h" />
+    <ClInclude Include="include\mbedtls\pk.h" />
+    <ClInclude Include="include\mbedtls\pkcs12.h" />
+    <ClInclude Include="include\mbedtls\pkcs5.h" />
+    <ClInclude Include="include\mbedtls\pkcs7.h" />
+    <ClInclude Include="include\mbedtls\platform.h" />
+    <ClInclude Include="include\mbedtls\platform_time.h" />
+    <ClInclude Include="include\mbedtls\platform_util.h" />
+    <ClInclude Include="include\mbedtls\poly1305.h" />
+    <ClInclude Include="include\mbedtls\private_access.h" />
+    <ClInclude Include="include\mbedtls\psa_util.h" />
+    <ClInclude Include="include\mbedtls\ripemd160.h" />
+    <ClInclude Include="include\mbedtls\rsa.h" />
+    <ClInclude Include="include\mbedtls\sha1.h" />
+    <ClInclude Include="include\mbedtls\sha256.h" />
+    <ClInclude Include="include\mbedtls\sha3.h" />
+    <ClInclude Include="include\mbedtls\sha512.h" />
+    <ClInclude Include="include\mbedtls\ssl.h" />
+    <ClInclude Include="include\mbedtls\ssl_cache.h" />
+    <ClInclude Include="include\mbedtls\ssl_ciphersuites.h" />
+    <ClInclude Include="include\mbedtls\ssl_cookie.h" />
+    <ClInclude Include="include\mbedtls\ssl_ticket.h" />
+    <ClInclude Include="include\mbedtls\threading.h" />
+    <ClInclude Include="include\mbedtls\threading_alt.h" />
+    <ClInclude Include="include\mbedtls\timing.h" />
+    <ClInclude Include="include\mbedtls\version.h" />
+    <ClInclude Include="include\mbedtls\x509.h" />
+    <ClInclude Include="include\mbedtls\x509_crl.h" />
+    <ClInclude Include="include\mbedtls\x509_crt.h" />
+    <ClInclude Include="include\mbedtls\x509_csr.h" />
+    <ClInclude Include="source\object.h" />
+    <ClInclude Include="source\physics.h" />
+    <ClInclude Include="source\player.h" />
+    <ClInclude Include="source\sprite.h" />
+    <ClInclude Include="source\sprites.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\Downloads\idle1.png" />
+    <Image Include="..\..\..\..\Downloads\idle2.png" />
+    <Image Include="..\..\..\..\Downloads\idle3.png" />
+    <Image Include="..\..\..\..\Downloads\idle4.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
